@@ -11,16 +11,16 @@ export default function timeline({
 
   return (
     <>
-      {data.map(
-        (data: {
-          id: Key | null | undefined;
-          nome: string;
-          descricao: string;
-          dataEntrada: string;
-          trabalhoAtual: boolean;
-        }) => (
-          <ol className="relative border-l border-gray-700">
-            <li className="mb-10 ml-6">
+      <ol className="relative border-l border-gray-700">
+        {data.map(
+          (data: {
+            id: Key | null | undefined | number;
+            nome: string;
+            descricao: string;
+            dataEntrada: string;
+            trabalhoAtual: boolean;
+          }) => (
+            <li key={data.id} className="mb-10 ml-6">
               <span className="absolute flex items-center justify-center w-6 h-6 rounded-full -left-3 ring-8 ring-gray-900 bg-gray-700">
                 <svg
                   width="24"
@@ -59,9 +59,9 @@ export default function timeline({
                 {data.descricao}
               </p>
             </li>
-          </ol>
-        )
-      )}
+          )
+        )}
+      </ol>
     </>
   );
 }
