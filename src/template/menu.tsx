@@ -17,7 +17,7 @@ export default function menu(): React.ReactElement {
               type="button"
               className="inline-flex items-center p-2 ml-3 text-sm rounded-lg md:hidden focus:outline-none focus:ring-2 text-gray-400 hover:bg-gray-700 focus:ring-gray-600"
               aria-controls="navbar-default"
-              aria-expanded="false"
+              aria-expanded={false}
             >
               <span className="sr-only">Open main menu</span>
               <svg
